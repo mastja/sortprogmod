@@ -13,6 +13,7 @@
 #include<limits>
 #include<time.h>
 #include<ctime>
+#include<cstdlib>
 using namespace std;
 
 void merge_sort(int arr[], int m, int n);

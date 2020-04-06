@@ -12,6 +12,7 @@
 #include<assert.h>
 #include<time.h>
 #include<ctime>
+#include<cstdlib>
 using namespace std;
 
 void insertion_sort(int arr[], int n);
