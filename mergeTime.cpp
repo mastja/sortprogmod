@@ -28,23 +28,19 @@ int main(){
     // open output file in write mode
     ofstream outfile1("insert.out");
 
-    //steps for insertion sort
-    // create variable for array length
-    int len;
-
     // variables for keeping track of time
     clock_t t1, t2;
 
     // declare variable for array length
-    int n=500;
+    int n=5000;
 
     // repeat loop every 5,000 up to 40,000 (7x)
-    while (n<=4000){
+    while (n<=40000){
 
         // declare a float to keep time total
-        float time = 0;
+        float time = 0.00;
 
-        // repeat loop measuring time of sort program 5 times for greater accuray
+        // repeat loop measuring time of sort program 4 times for greater accuray
         // average results over 4 trials
         for (int j=0; j<4; j++){
 
@@ -57,13 +53,13 @@ int main(){
                 }
 
             // get clock measure before running insertion sort
-            t1=clock();
+            t1 = clock();
 
             // run insertion sort function
-            merge_sort(arr, 0, n);
+            merge_sort(arr, 0, n - 1);
 
             // get clock measure after running insertion sort
-            t2=clock();
+            t2 = clock();
 
             // place difference of clock values in new float variable
             float diff ((float)t2-(float)t1);
@@ -85,7 +81,7 @@ int main(){
         outfile1 << n << " " << average << endl;
         
         // increment array size
-        n = n + 500;
+        n = n + 5000;
 
 
     }
