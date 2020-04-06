@@ -36,10 +36,10 @@ int main(){
     clock_t t1, t2;
 
     // declare variable for array length
-    int n=5000;
+    int n=50;
 
     // repeat loop every 5,000 up to 40,000 (7x)
-    while (n<=40000){
+    while (n<=400){
 
         // declare a float to keep time total
         float time = 0;
@@ -85,7 +85,7 @@ int main(){
         outfile1 << n << " " << average << endl;
         
         // increment array size
-        n = n + 5000;
+        n = n + 50;
 
 
     }
