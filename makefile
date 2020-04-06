@@ -20,5 +20,5 @@ clean:
 	rm *.o
 	rm -f merge.out
 	rm -f insert.out
-	rm mergesort
-	rm insertsort
+	rm mergeTime
+	rm insertTime
