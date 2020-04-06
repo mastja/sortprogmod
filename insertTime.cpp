@@ -33,10 +33,10 @@ int main(){
     clock_t t1, t2;
 
     // declare variable for array length
-    int n=50;
+    int n=500;
 
     // repeat loop every 5,000 up to 40,000 (7x)
-    while (n<=400){
+    while (n<=4000){
 
         // declare a float to keep time total
         float time = 0;
@@ -73,7 +73,7 @@ int main(){
         }
 
         // compute the average time over 4 trials
-        float average = time/4;
+        float average = time/4.00;
 
         // print to screen the value of n and the time to run
         cout << "Array size: " << n << "\t Time to run: " << average << endl;
@@ -82,7 +82,7 @@ int main(){
         outfile1 << n << " " << average << endl;
         
         // increment array size
-        n = n + 50;
+        n = n + 500;
 
 
     }
