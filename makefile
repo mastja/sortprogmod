@@ -5,20 +5,14 @@ CC = g++
 CFLAGS = -std=c++11 -c
 
 # run "make all" to run both mergesort and insertsort
-all: insertsort mergesort
+all: insert mergeTime
 
 # make the merge sort program
-merge: mergesort.o
-	$(CC) mergesort.o -o merge
-
-mergesort.o:
+merge: mergeTime.o
 	$(CC) $(CFLAGS) mergeTime.cpp
 
 # make the insert sort program
-insert: insertsort.o
-	$(CC) insertsort.o -o insert
-
-insertsort.o:
+insert: insertTime.o
 	$(CC) $(CFLAGS) insertTime.cpp
 
 
