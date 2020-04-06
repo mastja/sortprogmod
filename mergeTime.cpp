@@ -45,10 +45,10 @@ int main(){
         for (int j=0; j<4; j++){
 
             // declare array of size n+1
-            int arr[n+1];
+            int arr[n];
 
             // fill array with random numbers 0 to 10000
-            for (int i=1; i<n; i++){
+            for (int i=0; i<n; i++){
                 arr[i] = rand()%10000+1;
                 }
 
@@ -56,7 +56,7 @@ int main(){
             t1 = clock();
 
             // run insertion sort function
-            merge_sort(arr, 1, n);
+            merge_sort(arr, 0, n-1);
 
             // get clock measure after running insertion sort
             t2 = clock();
@@ -82,8 +82,6 @@ int main(){
         
         // increment array size
         n = n + 5000;
-
-
     }
 
     // close the opened files
@@ -130,8 +128,8 @@ void merge(int arr[], int p, int q, int r) {
     int i, j, k;
 
     // create two arrays left and right
-    int *left = new int[len + 1];
-    int *right = new int[len2 + 1];
+    int *left = new int[len + 2];
+    int *right = new int[len2 + 2];
 
     // fill left with contents of left subarray of arr
     for(i = 1; i <= len; i++){
