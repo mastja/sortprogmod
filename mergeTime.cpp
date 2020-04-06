@@ -89,9 +89,8 @@ int main(){
 
     }
 
-    // close the opened files.
-    infile.close();
-    outfile1.close()
+    // close the opened files
+    outfile1.close();
 
     return 0;
 }
