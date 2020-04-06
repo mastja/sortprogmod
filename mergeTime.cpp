@@ -26,13 +26,13 @@ int main(){
     srand(time(NULL));
 
     // open output file in write mode
-    ofstream outfile1("insert.out");
+    ofstream outfile1("merge.out");
 
     // variables for keeping track of time
     clock_t t1, t2;
 
     // declare variable for array length
-    int n=5000;
+    int n = 5000;
 
     // repeat loop every 5,000 up to 40,000 (7x)
     while (n<=40000){
@@ -44,11 +44,11 @@ int main(){
         // average results over 4 trials
         for (int j=0; j<4; j++){
 
-            // declare array of size n
-            int arr[n];
+            // declare array of size n+1
+            int arr[n+1];
 
             // fill array with random numbers 0 to 10000
-            for (int i=0; i<n; i++){
+            for (int i=1; i<n; i++){
                 arr[i] = rand()%10000+1;
                 }
 
@@ -56,7 +56,7 @@ int main(){
             t1 = clock();
 
             // run insertion sort function
-            merge_sort(arr, 0, n - 1);
+            merge_sort(arr, 1, n);
 
             // get clock measure after running insertion sort
             t2 = clock();
