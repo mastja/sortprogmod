@@ -12,14 +12,14 @@ merge: mergesort.o
 	$(CC) mergesort.o -o merge
 
 mergesort.o:
-	$(CC) $(CFLAGS) mergesort.cpp
+	$(CC) $(CFLAGS) mergeTime.cpp
 
 # make the insert sort program
 insert: insertsort.o
 	$(CC) insertsort.o -o insert
 
 insertsort.o:
-	$(CC) $(CFLAGS) insertsort.cpp
+	$(CC) $(CFLAGS) insertTime.cpp
 
 
 clean:
